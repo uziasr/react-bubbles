@@ -97,3 +97,33 @@ form {
     margin-top: 16px;
   }
 }
+
+.loginForm{
+  display:flex;
+  flex-direction:column;
+  width: 50%;
+  margin: 0 auto;
+  div{
+    margin-top: 2%;
+    display:flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  form{
+    width:40%;
+    margin: 0 auto;
+    margin-top: 4%;
+    input{
+      width:100%;
+      margin: 2% auto;
+      border: none;
+      border-bottom: 1px solid black;
+      font-size: 24px;
+    }
+  }
+}
+.addForm{
+  margin: 0 auto;
+  width: 100%;
+}

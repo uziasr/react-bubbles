@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from 'react-router-dom'
 import axiosWithAuth from '../utils/axiosWithAuth'
 
 
@@ -27,7 +28,11 @@ const Login = (props) => {
   }
 
   return (
-    <>
+    <div className='loginForm'>
+      <div>
+          <Link to='/'>Login</Link>
+          <Link to='/bubble'>Colors</Link>          
+      </div>
       <h1>Welcome to the Bubble App!</h1>
       <p>Build a login page here</p>
       <form>
@@ -35,7 +40,7 @@ const Login = (props) => {
         <input type='password' name='password' placeholder='password' onChange={handleChange}></input>
         <button onClick={submitUser}>Login!</button>
       </form>
-    </>
+    </div>
   );
 };
 
