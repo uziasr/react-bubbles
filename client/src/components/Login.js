@@ -18,7 +18,11 @@ const Login = (props) => {
     e.preventDefault()
     axiosWithAuth()
     .post('/login',user)
-    .then(res=>console.log(res))
+    .then(res=>{
+      console.log(res)
+      localStorage.setItem('token', res.data.payload)
+      props.history.push('/bubble')
+    })
     .catch(err=>console.log(err.response))
   }
 
